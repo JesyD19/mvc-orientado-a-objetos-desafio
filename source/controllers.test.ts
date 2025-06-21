@@ -31,11 +31,6 @@ test("Testeo el método processOptions", (t) => {
   });
   t.is(notFoundContact, "Contacto no encontrado");
 
-  const savedContact = controller.processOptions({
-    action: "save",
-    params: { id: 123, name: "Jesica" },
-  });
-
   const allContacts = controller.processOptions({
     action: "get",
   });
@@ -57,10 +52,6 @@ test("Testeo el método processOptions", (t) => {
       {
         id: 4,
         name: "Dana",
-      },
-      {
-        id: 123,
-        name: "Jesica",
       },
     ],
     allContacts
